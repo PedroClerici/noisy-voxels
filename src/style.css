@@ -1,0 +1,36 @@
+*,
+::after,
+::before,
+::backdrop,
+::file-selector-button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0 solid;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+body {
+  /* background: #221d20; */
+  background: #1f1a1d;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.engine-debug {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 256px;
+}

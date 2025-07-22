@@ -1,0 +1,27 @@
+{
+  "tasks": {
+    "wasm": "wasm-pack build ./lib",
+    "dev": "deno run -A --node-modules-dir npm:vite",
+    "build": "deno run -A --node-modules-dir npm:vite build",
+    "preview": "deno run -A --node-modules-dir npm:vite preview",
+    "serve": "deno run --allow-net --allow-read jsr:@std/http@1/file-server dist/"
+  },
+  "compilerOptions": {
+    "lib": ["ES2020", "DOM", "DOM.Iterable"]
+  },
+  "imports": {
+    "@/": "./src/",
+    "@biomejs/biome": "npm:@biomejs/biome@^2.1.1",
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.4",
+    "@tweakpane/core": "npm:@tweakpane/core@^2.0.5",
+    "@tweakpane/plugin-essentials": "npm:@tweakpane/plugin-essentials@^0.2.1",
+    "@types/three": "npm:@types/three@^0.178.1",
+    "three": "npm:three@^0.178.0/webgpu",
+    "@three": "npm:three@^0.178.0",
+    "tinybench": "npm:tinybench@^4.0.1",
+    "tweakpane": "npm:tweakpane@^4.0.5",
+    "vite": "npm:vite@^6.1.1",
+    "vite-plugin-wasm": "npm:vite-plugin-wasm@^3.5.0"
+  },
+  "nodeModulesDir": "auto"
+}
