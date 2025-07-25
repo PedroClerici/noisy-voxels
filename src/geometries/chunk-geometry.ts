@@ -1,7 +1,7 @@
 import { ChunkGeometryBuilder } from '@lib';
 import { BufferAttribute, BufferGeometry } from 'three';
 // Deno import maps seems to be not working with wasm...
-import { memory } from '../../lib/pkg/lib_bg.wasm';
+import { memory } from '../../lib/pkg/lib.wasm';
 
 export class ChunkGeometry extends BufferGeometry {
   constructor(voxels: Uint8Array) {
