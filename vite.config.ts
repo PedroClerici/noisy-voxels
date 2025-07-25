@@ -8,6 +8,20 @@ const wasm = wasmImport as any as typeof wasmImport.default;
 
 // https://vite.dev/config/
 export default defineConfig({
+  optimizeDeps: {
+    esbuildOptions: {
+      supported: {
+        'top-level-await': true,
+      },
+      target: 'es2022',
+    },
+  },
+  esbuild: {
+    supported: {
+      'top-level-await': true,
+    },
+    target: 'es2022',
+  },
   plugins: [deno(), wasm()],
   resolve: {
     alias: {
