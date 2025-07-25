@@ -11,7 +11,7 @@ enum VoxelType {
 }
 
 export class Chunk {
-  size = 42;
+  size = 32;
   terrain = {
     scale: 72,
     magnitude: 0.5,
@@ -34,7 +34,7 @@ export class Chunk {
     debug
       .addBinding(this, 'size', {
         min: 8,
-        max: 42,
+        max: 32,
         step: 1,
       })
       .on('change', () => {
@@ -62,7 +62,7 @@ export class Chunk {
 
     // Benchmark
     // const bench = new Bench({ iterations: 1000 });
-    // bench.add('Chunk 1D Array', () => {
+    // bench.add('Rusty Chunk', () => {
     //   this.generateMesh();
     // });
     // bench.run().then(() => {
@@ -115,10 +115,10 @@ export class Chunk {
     this.generateTerrain();
 
     const geometry = new ChunkGeometry(this.voxels);
-
     const material = new MeshMatcapNodeMaterial();
 
     this.mesh = new Mesh(geometry, material);
     world.scene.add(this.mesh);
+    geometry.boundingBox?.getCenter(world.view.controls.target);
   }
 }

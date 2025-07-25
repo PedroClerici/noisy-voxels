@@ -12,6 +12,7 @@ dist
 dist-ssr
 .vite
 *.local
+lib/target
 
 # Editor directories and files
 .vscode/*

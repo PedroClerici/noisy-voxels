@@ -11,6 +11,7 @@
   },
   "imports": {
     "@/": "./src/",
+    "@lib": "./lib/pkg/lib.js",
     "@biomejs/biome": "npm:@biomejs/biome@^2.1.1",
     "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.4",
     "@tweakpane/core": "npm:@tweakpane/core@^2.0.5",
